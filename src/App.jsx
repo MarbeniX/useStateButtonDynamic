@@ -3,13 +3,12 @@ import React from 'react'
 
 export default function App() {
   let [count, setCount] = useState(0)
-  function increment() {
-    setCount(count + 1)
+  function increment(){
+    setCount(prevCount => prevCount + 1)
   }
-  function decrement() {
-    setCount(count - 1)
+  function decrement(){
+    setCount(prevCount => prevCount - 1)
   }
-
   return (
     <div className='main-div'>
       <h1>How many times will Bob say "state in this section?</h1>
